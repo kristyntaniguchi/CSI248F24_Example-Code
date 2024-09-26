@@ -40,22 +40,31 @@ export default function State() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "f0f0f0",
-    padding: 20,
-    borderRadius: 10,
-    marginBottom: 20,
+    backgroundColor: "#f0f0f0", // Light gray background
+    padding: 20, // Add space inside the container
+    borderRadius: 10, // Rounded corners
+    marginBottom: 20, // Space below the container
+    width: "100%", // Full width of the parent
   },
-  title: { fontSize: 24, fontWeight: "bold", marginBottom: 10 },
+  title: {
+    fontSize: 24, // Large font size for the title
+    fontWeight: "bold", // Make the title bold
+    marginBottom: 10, // Space below the title
+    textAlign: "center", // Center the title text
+  },
   explanation: {
-    marginBottom: 15,
+    fontSize: 16, // Medium font size for explanation text
+    marginBottom: 15, // Space below the explanation
+    lineHeight: 22, // Increase line height for better readability
   },
   count: {
-    fontSize: 18,
-    fontWeight: "bold",
-    marginBottom: 10,
+    fontSize: 20, // Large font size for the count
+    fontWeight: "bold", // Make the count bold
+    marginBottom: 15, // Space below the count
+    textAlign: "center", // Center the count text
   },
   buttonContainer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
+    flexDirection: "row", // Arrange buttons horizontally
+    justifyContent: "space-around", // Evenly space the buttons
   },
 });

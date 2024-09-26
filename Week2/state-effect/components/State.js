@@ -28,7 +28,11 @@ export default function State() {
       <Text style={styles.count}>Count: {counter}</Text>
       <View style={styles.buttonContainer}>
         <Button title="Increment" onPress={increment}></Button>
-        <Button title="Decrement" onPress={decrement}></Button>
+        {/* I am going to pass the function as a generic arrow function */}
+        <Button
+          title="Decrement"
+          onPress={() => setCounter(counter - 1)}
+        ></Button>
       </View>
     </View>
   );

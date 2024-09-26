@@ -3,13 +3,17 @@ import { StyleSheet, Text, View, Button, FlatList } from "react-native";
 //to useState we need to import it from react
 import { useState } from "react";
 import State from "./components/State";
+import Name from "./components/Name";
+import GroceryList from "./components/GroceryList";
 
 export default function App() {
   let numbers = [1, 2, 3];
   return (
     <View style={styles.container}>
       <State></State>
-      <FlatList
+      <Name></Name>
+      <GroceryList></GroceryList>
+      {/* <FlatList
         // Pass the array to the data prop
         data={numbers}
         // KeyExtractor wants a unique idenfier for each element
@@ -27,7 +31,7 @@ export default function App() {
             </Text>
           );
         }}
-      ></FlatList>
+      ></FlatList> */}
     </View>
   );
 }

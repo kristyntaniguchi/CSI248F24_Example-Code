@@ -15,10 +15,38 @@ export default function CarListItem({ car }) {
 }
 
 const styles = StyleSheet.create({
-  container: {},
-  make: {},
-  model: {},
-  details: {},
-  year: {},
-  price: {},
+  container: {
+    backgroundColor: "lightgray",
+    borderRadius: 8,
+    padding: 16,
+    marginBottom: 12,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  make: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 4,
+  },
+  model: {
+    fontSize: 16,
+    color: "#555",
+    marginBottom: 8,
+  },
+  details: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  year: {
+    fontSize: 14,
+    color: "blue",
+  },
+  price: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "red",
+  },
 });

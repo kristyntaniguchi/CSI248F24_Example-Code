@@ -10,8 +10,27 @@ export default function CarList({ cars }) {
   //check to make sure cars passed
   console.log(cars);
   return (
-    <FlatList data={cars} renderItem={renderItem} keyExtractor={keyExtractor} />
+    <FlatList
+      data={cars}
+      renderItem={renderItem}
+      keyExtractor={keyExtractor}
+      //contentContainerSyle we used for styling
+      contentContainerStyle={styles.container}
+      //initialNumToRender limit how many are rendered at once
+      initialNumToRender={10}
+      //maxrenderperbatch how many additional items rendered as they scroll
+      maxToRenderPerBatch={5}
+      //windowsize limits how many are shown
+      windowSize={5}
+      onEndReached={() => {
+        console.log("Scrolled to end");
+      }}
+    />
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 16,
+  },
+});

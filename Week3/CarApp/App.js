@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 //you have to import useState before you can use it
 import { useState } from "react";
 import CarList from "./components/CarList";
+import CarFormVariables from "./components/CarFormVariables";
 
 export default function App() {
   // State to store the list of cars
@@ -32,7 +33,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <CarFormVariables></CarFormVariables>
       <CarList cars={cars} />
       <StatusBar style="auto" />
     </View>

@@ -87,6 +87,7 @@ export default function CarFormVariables(addCar) {
         onChangeText={setMake}
         placeholder="Make"
       ></TextInput>
+      <Text>{errors.make}</Text>
 
       {/*MODEL*/}
       <TextInput
@@ -94,6 +95,7 @@ export default function CarFormVariables(addCar) {
         onChangeText={setModel}
         placeholder="Model"
       ></TextInput>
+      <Text>{errors.model}</Text>
 
       {/*YEAR*/}
       <TextInput
@@ -101,6 +103,7 @@ export default function CarFormVariables(addCar) {
         onChangeText={setYear}
         placeholder="Year"
       ></TextInput>
+      <Text>{errors.year}</Text>
 
       {/*PRICE*/}
       <TextInput
@@ -108,6 +111,7 @@ export default function CarFormVariables(addCar) {
         onChangeText={setPrice}
         placeholder="Price"
       ></TextInput>
+      <Text>{errors.price}</Text>
 
       {/*Button to submit the form.  handleSubmit doens't get () because it's not being called here, it's only being provided so it can be called later on*/}
       <Button onPress={handleSubmit} title="Add Car"></Button>

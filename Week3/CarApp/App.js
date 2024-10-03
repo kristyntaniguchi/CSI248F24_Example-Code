@@ -31,9 +31,34 @@ export default function App() {
     { id: "15", make: "Acura", model: "TLX", year: 2023, price: 43000 },
   ]);
 
+  //Function to add a new car
+  const addCar = (newCar) => {
+    console.log("From App.js");
+    //Make sure it's getting to the right spot with console.log()
+    console.log(newCar);
+
+    //setState gives you the value of the variable and the function to update it
+    //We cannot change state variables directly, we have to use setCars
+    //I need to pass in a new array containing everything from the previous array, plus the new car
+    //[...cars, newCar] is the array with all the cars and the new car
+
+    //We don't have a db to set the id, so we need to manually add it
+    //newCar.id = (cars.length + 1).toString();
+    //let newArray = [...cars, newCar];
+    //setCars(newArray);
+    //Can also do setCars([...cars, newCar]);
+
+    //Make a new array called currentCars, fill it with the old array, and add the new car to it. it will also set the id property
+    setCars((currentCars) => [
+      ...currentCars,
+      { ...newCar, id: (cars.length + 1).toString() },
+    ]);
+  };
+
   return (
     <View style={styles.container}>
-      <CarFormVariables></CarFormVariables>
+      {/* TO use this (11:36 am 10/3 lecture) */}
+      <CarFormVariables addCar={addCar}></CarFormVariables>
       <CarList cars={cars} />
       <StatusBar style="auto" />
     </View>
